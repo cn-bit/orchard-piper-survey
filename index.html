@@ -283,7 +283,7 @@ var CONFIG = {
       ] };
     },
     project: function () {
-      return { title: 'Which Orchard Piper building is your residence in?', done: function () { return !!A.project; }, body: [choice('project', projectList())] };
+      return { title: 'Which Orchard Piper address is your residence at?', done: function () { return !!A.project; }, body: [choice('project', projectList())] };
     },
     discovery: function () {
       return { title: 'How did you first come across Orchard Piper?', done: function () { return !!A.discovery && otherOk('discovery'); },
@@ -304,7 +304,7 @@ var CONFIG = {
         ['rate_construction', 'Updates during construction'],
         ['rate_changes', 'Making changes to your residence']
       ];
-      if (settled()) stages.push(['rate_handover', 'Settlement and handover'], ['rate_living', 'Life in the building']);
+      if (settled()) stages.push(['rate_handover', 'Settlement and handover'], ['rate_living', 'Life in your residence']);
       var list = el('ul', { 'class': 'stages' });
       stages.forEach(function (s) {
         var whyKey = s[0].replace('rate_', 'why_');
