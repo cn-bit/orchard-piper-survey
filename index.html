@@ -332,7 +332,7 @@ var CONFIG = {
       return { title: settled() ? 'Who did you hear from during construction?' : 'Who do you hear from about progress?',
         help: 'Choose all that apply.', done: function () { return (A.progress_source || []).length > 0 && otherOk('progress_source'); },
         need: 'Choose at least one to continue', body: [
-        choice('progress_source', ['Orchard Piper', 'The sales agent', 'The builder', 'My solicitor or conveyancer', 'Other', 'No one in particular'], { multi: true, exclusive: 'No one in particular' })
+        choice('progress_source', ['Orchard Piper', 'The sales agent', 'The builder', 'My solicitor or conveyancer', 'No one in particular', 'Other'], { multi: true, exclusive: 'No one in particular' })
       ] };
     },
     updates: function () {
